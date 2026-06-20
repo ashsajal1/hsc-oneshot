@@ -35,6 +35,10 @@ importers:
       vite-plugin-pwa:
         specifier: ^1.3.0
         version: 1.3.0(vite@7.3.5(terser@5.48.0))(workbox-build@7.4.1)(workbox-window@7.4.1)
+    devDependencies:
+      '@vite-pwa/astro':
+        specifier: ^1.2.0
+        version: 1.2.0(astro@6.4.8(rollup@4.62.2)(terser@5.48.0))(vite-plugin-pwa@1.3.0(vite@7.3.5(terser@5.48.0))(workbox-build@7.4.1)(workbox-window@7.4.1))
 
 packages:
 
@@ -1188,6 +1192,16 @@ packages:
 
   '@ungap/structured-clone@1.3.1':
     resolution: {integrity: sha512-mUFwbeTqrVgDQxFveS+df2yfap6iuP20NAKAsBt5jDEoOTDew+zwLAOilHCeQJOVSvmgCX4ogqIrA0mnyr08yQ==}
+
+  '@vite-pwa/astro@1.2.0':
+    resolution: {integrity: sha512-ZJYkc87j/nuuBJjZEYe0C4MeXH3UHcYPWuSH0qq3dRIhlm8ej4ygPZm9YyB6rWNuPZ7ixRX+hVWHU3NaXfkzyA==}
+    peerDependencies:
+      '@vite-pwa/assets-generator': ^1.0.0
+      astro: ^1.6.0 || ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
+      vite-plugin-pwa: ^1.2.0
+    peerDependenciesMeta:
+      '@vite-pwa/assets-generator':
+        optional: true
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -4212,6 +4226,11 @@ snapshots:
   '@types/unist@3.0.3': {}
 
   '@ungap/structured-clone@1.3.1': {}
+
+  '@vite-pwa/astro@1.2.0(astro@6.4.8(rollup@4.62.2)(terser@5.48.0))(vite-plugin-pwa@1.3.0(vite@7.3.5(terser@5.48.0))(workbox-build@7.4.1)(workbox-window@7.4.1))':
+    dependencies:
+      astro: 6.4.8(rollup@4.62.2)(terser@5.48.0)
+      vite-plugin-pwa: 1.3.0(vite@7.3.5(terser@5.48.0))(workbox-build@7.4.1)(workbox-window@7.4.1)
 
   acorn-jsx@5.3.2(acorn@8.17.0):
     dependencies:
