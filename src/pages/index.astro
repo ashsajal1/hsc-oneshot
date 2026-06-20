@@ -1,17 +1,113 @@
 ---
+import Layout from '../layouts/Layout.astro';
 
+const p2Chapters = [
+  { num: 1, title: 'তাপগতিবিদ্যা', path: '/p2/1' },
+  { num: 2, title: 'স্থির তড়িৎ', path: '/p2/2' },
+  { num: 3, title: 'কার্শফের সূত্র', path: '/p2/3' },
+  { num: 4, title: 'চৌম্বক ক্ষেত্র', path: '/p2/4' },
+  { num: 5, title: 'চৌম্বক ফ্লাক্স', path: '/p2/5' },
+  { num: 6, title: 'প্রিজম', path: '/p2/6' },
+  { num: 7, title: 'ভৌত আলোকবিজ্ঞান', path: '/p2/7' },
+  { num: 8, title: 'আধুনিক পদার্থবিজ্ঞানের সূচনা', path: '/p2/8' },
+  { num: 9, title: 'পরমাণুর মডেল ও নিউক্লিয়ার পদার্থবিজ্ঞান', path: '/p2/9' },
+  { num: 10, title: 'সেমিকন্ডাক্টর ও ইলেকট্রনিক্স', path: '/p2/10' },
+  { num: 11, title: 'জ্যোতির্বিজ্ঞান', path: '/p2/11' },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="HSC Physics Oneshot">
+  <main>
+    <div class="container">
+      <h1>HSC পদার্থবিজ্ঞান ওনশট</h1>
+      <p class="subtitle">এইচএসসি পদার্থবিজ্ঞান — সকল অধ্যায়ের সংক্ষিপ্ত ও গুরুত্বপূর্ণ নোটস</p>
+
+      <section>
+        <h2>পদার্থবিজ্ঞান ২য় পত্র</h2>
+        <div class="grid">
+          {p2Chapters.map((ch) => (
+            <a href={ch.path} class="card">
+              <span class="num">{ch.num}</span>
+              <span class="title">{ch.title}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <style>
+    main {
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      background: #f9fafb;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 0.25rem;
+      color: #111827;
+    }
+    .subtitle {
+      text-align: center;
+      color: #6b7280;
+      margin-bottom: 2.5rem;
+      font-size: 0.95rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #374151;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 0.5rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 0.75rem;
+    }
+    .card {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.85rem 1rem;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .card:hover {
+      border-color: #3b82f6;
+      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+    }
+    .num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 6px;
+      background: #eff6ff;
+      color: #2563eb;
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .title {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #1f2937;
+    }
+  </style>
+</Layout>
