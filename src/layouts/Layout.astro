@@ -20,6 +20,9 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <nav>
+      <a href="/" class="home-link">HSC Physics Oneshot</a>
+    </nav>
     <slot />
     <script>
       if ('serviceWorker' in navigator) {
@@ -29,6 +32,21 @@ const { title } = Astro.props;
       }
     </script>
     <style is:global>
+      nav {
+        background: #1e293b;
+        padding: 0.75rem 1rem;
+        display: flex;
+        align-items: center;
+      }
+      .home-link {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1rem;
+      }
+      .home-link:hover {
+        color: #93c5fd;
+      }
       table {
         width: 100%;
         border-collapse: collapse;

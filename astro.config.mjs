@@ -43,7 +43,20 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
+        globPatterns: ['**/*.{js,css,svg,png,ico,woff2}'],
+        runtimeCaching: [
+          {
+            urlPattern: /\.html$/,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'html-cache',
+              expiration: {
+                maxEntries: 50,
+                maxAgeSeconds: 0,
+              },
+            },
+          },
+        ],
       },
       devOptions: {
         enabled: true,
