@@ -90,7 +90,7 @@ const p2Chapters = [
     main {
       min-height: 100vh;
       padding: 2rem 1rem;
-      background: #f9fafb;
+      background: var(--bg);
     }
     .container {
       max-width: 800px;
@@ -101,11 +101,11 @@ const p2Chapters = [
       font-weight: 700;
       text-align: center;
       margin-bottom: 0.25rem;
-      color: #111827;
+      color: var(--text);
     }
     .subtitle {
       text-align: center;
-      color: #6b7280;
+      color: var(--text-secondary);
       margin-bottom: 2.5rem;
       font-size: 0.95rem;
     }
@@ -116,8 +116,8 @@ const p2Chapters = [
       font-size: 1.2rem;
       font-weight: 600;
       margin-bottom: 1rem;
-      color: #374151;
-      border-bottom: 2px solid #e5e7eb;
+      color: var(--text-heading);
+      border-bottom: 2px solid var(--border);
       padding-bottom: 0.5rem;
     }
     .grid {
@@ -130,16 +130,16 @@ const p2Chapters = [
       align-items: center;
       gap: 0.75rem;
       padding: 0.85rem 1rem;
-      background: #fff;
-      border: 1px solid #e5e7eb;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
       border-radius: 8px;
       text-decoration: none;
       color: inherit;
       transition: border-color 0.15s, box-shadow 0.15s;
     }
     .card:hover {
-      border-color: #3b82f6;
-      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+      border-color: var(--num-text);
+      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
     }
     .num {
       display: flex;
@@ -148,8 +148,8 @@ const p2Chapters = [
       width: 2rem;
       height: 2rem;
       border-radius: 6px;
-      background: #eff6ff;
-      color: #2563eb;
+      background: var(--num-bg);
+      color: var(--num-text);
       font-weight: 700;
       font-size: 0.9rem;
       flex-shrink: 0;
@@ -157,7 +157,7 @@ const p2Chapters = [
     .title {
       font-size: 0.9rem;
       font-weight: 500;
-      color: #1f2937;
+      color: var(--text-heading);
     }
   </style>
 </Layout>
