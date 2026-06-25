@@ -1,44 +1,35 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
 const b2Chapters = [
-  { num: 1, title: 'শ্রেণিবিন্যাস', path: '/b2/1' },
-  { num: 2, title: 'হাইড্রা', path: '/b2/2' },
-  { num: 3, title: 'পরিপাক ও শোষণ', path: '/b2/3' },
-  { num: 4, title: 'রক্ত ও সংবহন', path: '/b2/4' },
-  { num: 5, title: 'শ্বসন ও শ্বাসক্রিয়া', path: '/b2/5' },
-  { num: 6, title: 'বর্জ্য ও নিষ্কাশন', path: '/b2/6' },
-  { num: 7, title: 'চলন ও অঙ্গচালনা', path: '/b2/7' },
-  { num: 8, title: 'সমন্বয় ও নিয়ন্ত্রণ', path: '/b2/8' },
-  { num: 9, title: 'মানব জীবনের ধারাবাহিকতা', path: '/b2/9' },
-  { num: 10, title: 'প্রতিরক্ষা স্তর', path: '/b2/10' },
-  { num: 11, title: 'জিনতত্ত্ব ও বিবর্তন', path: '/b2/11' },
-  { num: 12, title: 'প্রাণীর আচরণ', path: '/b2/12' },
+  { num: 1, title: "শ্রেণিবিন্যাস", path: "/b2/1" },
+  { num: 2, title: "হাইড্রা", path: "/b2/2" },
+  { num: 3, title: "পরিপাক ও শোষণ", path: "/b2/3" },
+  { num: 4, title: "রক্ত ও সংবহন", path: "/b2/4" },
+  { num: 5, title: "শ্বসন ও শ্বাসক্রিয়া", path: "/b2/5" },
+  { num: 6, title: "বর্জ্য ও নিষ্কাশন", path: "/b2/6" },
+  { num: 7, title: "চলন ও অঙ্গচালনা", path: "/b2/7" },
+  { num: 8, title: "সমন্বয় ও নিয়ন্ত্রণ", path: "/b2/8" },
+  { num: 9, title: "মানব জীবনের ধারাবাহিকতা", path: "/b2/9" },
+  { num: 10, title: "প্রতিরক্ষা স্তর", path: "/b2/10" },
+  { num: 11, title: "জিনতত্ত্ব ও বিবর্তন", path: "/b2/11" },
+  { num: 12, title: "প্রাণীর আচরণ", path: "/b2/12" },
 ];
 
-const p1Chapters = [
-  { num: 1, title: 'ভৌতজগৎ ও পরিমাপ', path: '/p1/1' },
-  { num: 2, title: 'ভেক্টর', path: '/p1/2' },
-  { num: 3, title: 'নিউটনের গতিসূত্র', path: '/p1/3' },
-  { num: 4, title: 'মহাকর্ষ ও অভিকর্ষ', path: '/p1/4' },
-  { num: 5, title: 'কাজ ও শক্তি', path: '/p1/5' },
-  { num: 6, title: 'মুহূর্ত ও কৌণিক ভরবেগ', path: '/p1/6' },
-  { num: 7, title: 'স্থিতিস্থাপকতা', path: '/p1/7' },
-  { num: 8, title: 'পৃষ্ঠটনত্ব', path: '/p1/8' },
-];
+const p1Chapters = [{ num: 2, title: "ভেক্টর", path: "/p1/2" }];
 
 const p2Chapters = [
-  { num: 1, title: 'তাপগতিবিদ্যা', path: '/p2/1' },
-  { num: 2, title: 'স্থির তড়িৎ', path: '/p2/2' },
-  { num: 3, title: 'কার্শফের সূত্র', path: '/p2/3' },
-  { num: 4, title: 'চৌম্বক ক্ষেত্র', path: '/p2/4' },
-  { num: 5, title: 'চৌম্বক ফ্লাক্স', path: '/p2/5' },
-  { num: 6, title: 'প্রিজম', path: '/p2/6' },
-  { num: 7, title: 'ভৌত আলোকবিজ্ঞান', path: '/p2/7' },
-  { num: 8, title: 'আধুনিক পদার্থবিজ্ঞানের সূচনা', path: '/p2/8' },
-  { num: 9, title: 'পরমাণুর মডেল ও নিউক্লিয়ার পদার্থবিজ্ঞান', path: '/p2/9' },
-  { num: 10, title: 'সেমিকন্ডাক্টর ও ইলেকট্রনিক্স', path: '/p2/10' },
-  { num: 11, title: 'জ্যোতির্বিজ্ঞান', path: '/p2/11' },
+  { num: 1, title: "তাপগতিবিদ্যা", path: "/p2/1" },
+  { num: 2, title: "স্থির তড়িৎ", path: "/p2/2" },
+  { num: 3, title: "কার্শফের সূত্র", path: "/p2/3" },
+  { num: 4, title: "চৌম্বক ক্ষেত্র", path: "/p2/4" },
+  { num: 5, title: "চৌম্বক ফ্লাক্স", path: "/p2/5" },
+  { num: 6, title: "প্রিজম", path: "/p2/6" },
+  { num: 7, title: "ভৌত আলোকবিজ্ঞান", path: "/p2/7" },
+  { num: 8, title: "আধুনিক পদার্থবিজ্ঞানের সূচনা", path: "/p2/8" },
+  { num: 9, title: "পরমাণুর মডেল ও নিউক্লিয়ার পদার্থবিজ্ঞান", path: "/p2/9" },
+  { num: 10, title: "সেমিকন্ডাক্টর ও ইলেকট্রনিক্স", path: "/p2/10" },
+  { num: 11, title: "জ্যোতির্বিজ্ঞান", path: "/p2/11" },
 ];
 ---
 
@@ -46,41 +37,49 @@ const p2Chapters = [
   <main>
     <div class="container">
       <h1>HSC ওনশট</h1>
-      <p class="subtitle">এইচএসসি — সকল অধ্যায়ের সংক্ষিপ্ত ও গুরুত্বপূর্ণ নোটস</p>
+      <p class="subtitle">
+        এইচএসসি — সকল অধ্যায়ের সংক্ষিপ্ত ও গুরুত্বপূর্ণ নোটস
+      </p>
 
       <section>
         <h2>পদার্থবিজ্ঞান ১ম পত্র</h2>
         <div class="grid">
-          {p1Chapters.map((ch) => (
-            <a href={ch.path} class="card">
-              <span class="num">{ch.num}</span>
-              <span class="title">{ch.title}</span>
-            </a>
-          ))}
+          {
+            p1Chapters.map((ch) => (
+              <a href={ch.path} class="card">
+                <span class="num">{ch.num}</span>
+                <span class="title">{ch.title}</span>
+              </a>
+            ))
+          }
         </div>
       </section>
 
       <section>
         <h2>পদার্থবিজ্ঞান ২য় পত্র</h2>
         <div class="grid">
-          {p2Chapters.map((ch) => (
-            <a href={ch.path} class="card">
-              <span class="num">{ch.num}</span>
-              <span class="title">{ch.title}</span>
-            </a>
-          ))}
+          {
+            p2Chapters.map((ch) => (
+              <a href={ch.path} class="card">
+                <span class="num">{ch.num}</span>
+                <span class="title">{ch.title}</span>
+              </a>
+            ))
+          }
         </div>
       </section>
 
       <section>
         <h2>জীববিজ্ঞান ২য় পত্র (প্রাণীবিজ্ঞান)</h2>
         <div class="grid">
-          {b2Chapters.map((ch) => (
-            <a href={ch.path} class="card">
-              <span class="num">{ch.num}</span>
-              <span class="title">{ch.title}</span>
-            </a>
-          ))}
+          {
+            b2Chapters.map((ch) => (
+              <a href={ch.path} class="card">
+                <span class="num">{ch.num}</span>
+                <span class="title">{ch.title}</span>
+              </a>
+            ))
+          }
         </div>
       </section>
     </div>
@@ -135,7 +134,9 @@ const p2Chapters = [
       border-radius: 8px;
       text-decoration: none;
       color: inherit;
-      transition: border-color 0.15s, box-shadow 0.15s;
+      transition:
+        border-color 0.15s,
+        box-shadow 0.15s;
     }
     .card:hover {
       border-color: var(--num-text);
