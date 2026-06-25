@@ -1,6 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+const banglaChapters = [
+  { num: 1, title: "ফেব্রুয়ারি ১৯৬৯", path: "/b/feb" },
+  { num: 2, title: "বিদ্রোহী", path: "/b/bidrohi" },
+  { num: 3, title: "সোনার তরী", path: "/b/sonar" },
+  { num: 4, title: "প্রতিদান", path: "/b/protidan" },
+  { num: 5, title: "মেঘনাদ", path: "/b/meghnad" },
+  { num: 6, title: "লালসালু", path: "/b/lalsalu" },
+  { num: 7, title: "সিরাজউদ্দৌলা", path: "/b/siraj" },
+];
+
 const b2Chapters = [
   { num: 1, title: "শ্রেণিবিন্যাস", path: "/b2/1" },
   { num: 2, title: "হাইড্রা", path: "/b2/2" },
@@ -40,6 +50,20 @@ const p2Chapters = [
       <p class="subtitle">
         এইচএসসি — সকল অধ্যায়ের সংক্ষিপ্ত ও গুরুত্বপূর্ণ নোটস
       </p>
+
+      <section>
+        <h2>বাংলা ১ম পত্র</h2>
+        <div class="grid">
+          {
+            banglaChapters.map((ch) => (
+              <a href={ch.path} class="card">
+                <span class="num">{ch.num}</span>
+                <span class="title">{ch.title}</span>
+              </a>
+            ))
+          }
+        </div>
+      </section>
 
       <section>
         <h2>পদার্থবিজ্ঞান ১ম পত্র</h2>
