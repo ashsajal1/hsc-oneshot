@@ -1,19 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-const banglaChapters = [
-  { num: 1, title: "ফেব্রুয়ারি ১৯৬৯", path: "/b/feb" },
-  { num: 2, title: "বিদ্রোহী", path: "/b/bidrohi" },
-  { num: 3, title: "সোনার তরী", path: "/b/sonar" },
-  { num: 4, title: "প্রতিদান", path: "/b/protidan" },
-  { num: 5, title: "মেঘনাদ", path: "/b/meghnad" },
-  { num: 6, title: "লালসালু", path: "/b/lalsalu" },
-  { num: 7, title: "সিরাজউদ্দৌলা", path: "/b/siraj" },
-  { num: 8, title: "তাহারেই মনে পড়ে", path: "/b/taharei" },
-  { num: 9, title: "আঠারো বছর বয়স", path: "/b/atharo" },
-  { num: 10, title: "আমি কিংবদন্তির কথা বলছি", path: "/b/king" },
-];
-
 const b2Chapters = [
   { num: 1, title: "শ্রেণিবিন্যাস", path: "/b2/1" },
   { num: 2, title: "হাইড্রা", path: "/b2/2" },
@@ -29,7 +16,17 @@ const b2Chapters = [
   { num: 12, title: "প্রাণীর আচরণ", path: "/b2/12" },
 ];
 
-const p1Chapters = [{ num: 2, title: "ভেক্টর", path: "/p1/2" }];
+const p1Chapters = [
+  { num: 2, title: "ভেক্টর", path: "/p1/2" },
+  { num: 3, title: "গতিবিদ্যা", path: "/p1/3" },
+  { num: 4, title: "নিউটনিয়ান বলবিদ্যা", path: "/p1/4" },
+  { num: 5, title: "কাজ, শক্তি ও ক্ষমতা", path: "/p1/5" },
+  { num: 6, title: "মহাকর্ষ ও অভিকর্ষ", path: "/p1/6" },
+  { num: 7, title: "পদার্থের গাঠনিক ধর্ম", path: "/p1/7" },
+  { num: 8, title: "পর্যাবৃত্ত গতি", path: "/p1/8" },
+  { num: 9, title: "তরঙ্গ", path: "/p1/9" },
+  { num: 10, title: "আদর্শ গ্যাস ও গ্যাসের গতিতত্ত্ব", path: "/p1/10" },
+];
 
 const p2Chapters = [
   { num: 1, title: "তাপগতিবিদ্যা", path: "/p2/1" },
@@ -53,20 +50,6 @@ const p2Chapters = [
       <p class="subtitle">
         এইচএসসি — সকল অধ্যায়ের সংক্ষিপ্ত ও গুরুত্বপূর্ণ নোটস
       </p>
-
-      <section>
-        <h2>বাংলা ১ম পত্র</h2>
-        <div class="grid">
-          {
-            banglaChapters.map((ch) => (
-              <a href={ch.path} class="card">
-                <span class="num">{ch.num}</span>
-                <span class="title">{ch.title}</span>
-              </a>
-            ))
-          }
-        </div>
-      </section>
 
       <section>
         <h2>পদার্থবিজ্ঞান ১ম পত্র</h2>
